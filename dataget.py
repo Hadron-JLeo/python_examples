@@ -8,7 +8,7 @@ import time
 import pathlib
 from pathlib import Path
 
-wiki_url = 
+wiki_url = 'WIKI URL GOES HERE '
 wiki_table = "wikitable sortable jquery-tablesorter"
 wiki_tag = "tbody"
 
@@ -16,18 +16,17 @@ options = Options()
 page_wait_time = 20
 
 def initialiseDriver(b):
+    """ Initialises the Chrome driver through installation, passes on options argument """
     options.headless = b
-#caps = webdriver.DesiredCapabilities.CHROME.copy()
+    
     driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
     WebDriverWait(driver, 1)
     time.sleep(1)
     return driver
 
-d = initialiseDriver(False)
-d.get(wiki_url) # get on wiki page
-time.sleep(1)
 
-def Get_Servants():
+
+def Get_Servants()->None:
     servant_list = []
     d.implicitly_wait(3)
     table = d.find_element_by_xpath("//*[contains(@class, 'wikitable sortable jquery-tablesorter')]").find_element_by_tag_name("tbody")
@@ -52,7 +51,7 @@ def Get_Servants():
 
     return servant_list
 
-def Rid_Popup():
+def Rid_Popup()->None:
     
     try:
         #d.implicitly_wait(page_wait_time)
@@ -69,6 +68,12 @@ def Rid_Popup():
             print("Not found")
             pass
 
-Rid_Popup()
-Get_Servants()
-    
+def main()->None:
+    d = initialiseDriver(False)
+    d.get(wiki_url) # get on wiki page
+    time.sleep(1)
+    Rid_Popup()
+    Get_Servants()
+
+if __name__ == "__main__":
+    main()

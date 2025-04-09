@@ -6,7 +6,7 @@ filter_array = [
 
 example_title = "proto void max_intuples 1238asda "
 
-def filter(title, to_filter):
+def filter(title:str, to_filter:list)->str:
     """ Get a list of words to remove out of a string array,
     returns the isolated word """
 

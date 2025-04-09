@@ -6,8 +6,12 @@ def walk_folder_check(path, env_name)->str:
     folders = os.listdir(path)
     res:str = ""
 
-    for folder in folders:
-        if env_name in os.listdir(folder):
-            res = folder
+    try:
+        for folder in folders:
+            if env_name in os.listdir(folder):
+                res = folder
     
-    except Exception as e: print(e)
+    except Exception as e: 
+        print(e)
+
+    return res

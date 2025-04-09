@@ -31,11 +31,6 @@ def api_command(*args):
 @dataclass (init=True, repr=True)
 class TestedFunction:
 
-    name: str
-    id:int = 0
-    c_file: str = ""
-    test_cases = []
-
     def __init__(self, line:str, id:int=0)->None:
         # get test case name alone
         """ Initialise Name and ID for this TestedFunction """

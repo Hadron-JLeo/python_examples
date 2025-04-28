@@ -20,7 +20,7 @@ def count_up_helper(max_limit: int) -> None:
 
     helper(1)  # Start from 1
 
-# 'Magical' recursion by subtracting backwards and adding the to the result, only works if the result is a number that divides the max_limit cleanly!
+# 'Magical' (=not proper) recursion by subtracting backwards and adding the to the result, only works if the result is a number that divides the max_limit cleanly!
 def my_recursion(max_limit: int = 500):
     """
     A 'magical' recursive function that performs step-incrementation

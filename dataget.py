@@ -9,13 +9,17 @@ from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 from typing import List
 import time
+# ----------------------------------------------------------------- #
 
-# Constants
+
+# ---------------------------------------->>  CONSTANTS START <<-----
 WIKI_URL: str = "WIKI URL GOES HERE"
 WIKI_TABLE_CLASS: str = "wikitable sortable jquery-tablesorter"
 PAGE_WAIT_TIME: int = 20
 
 
+
+# ----------------------------------------------------->> FUNCTION DEFINITIONS START <<-----
 def initialise_driver(headless: bool) -> webdriver.Chrome:
     """
     Initialize the Chrome driver with options.

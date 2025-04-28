@@ -2,7 +2,7 @@
 
 def my_recursion(max_limit: int = 500):
     """
-    A recursive function that performs step-incrementation
+    A 'magical' recursive function that performs step-incrementation
     """
     result = 1 # Step = 1, Start = 1
 

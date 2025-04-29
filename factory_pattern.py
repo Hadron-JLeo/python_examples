@@ -20,7 +20,7 @@ class Subject:
 
 
 class SubjectFactory:
-    """ A factory class which created and manages instances of type Subject """
+    """ A factory class which creates and manages instances of type Subject """
     _subject_count: int = 0
     _subjects: Dict[str, Subject] = {}
 
@@ -54,4 +54,5 @@ class SubjectFactory:
 
     @classmethod
     def get_all_subjects(cls) -> Dict[str, Subject]:
+        """ Return a copy of the internal dictionary to prevent mutation (changes) of it """
         return cls._subjects.copy()

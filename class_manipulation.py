@@ -27,4 +27,4 @@ class Car2:
 c2 = Car2("Toyota")
 c2.brand = "Honda"    # ok
 
-c2.wheels = 4         # ❌ AttributeError!
+c2.wheels = 4         # AttributeError!

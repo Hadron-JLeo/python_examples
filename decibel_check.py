@@ -13,7 +13,7 @@ def too_loud(level: int, earphones: bool) -> bool:
 
 def main()->None:
   lvl = 121
-  ear = True # nose = taken
+  ear = True
 
   x = too_loud(lvl, ear)
   print(x)

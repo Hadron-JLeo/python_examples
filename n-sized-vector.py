@@ -4,25 +4,24 @@ from typing import Union
 import math
 
 class Vector:
-    def __init__(self, *values: float):
+    def __init__(self, *values: float) -> None:
         # Use a tuple to create a vector of n-dimensions
         self._values = tuple(float(v) for v in values)
-        
         print(self) # Print to console once a new Vector is created
 
-    def __len__(self):
+    def __len__(self) -> int:
         return len(self._values)
 
-    def __getitem__(self, index):
+    def __getitem__(self, index) -> float:
         return self._values[index]
 
-    def __iter__(self):
+    def __iter__(self) -> float:
         return iter(self._values)
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         return f"Vector{self._values}"
 
-    def __eq__(self, other):
+    def __eq__(self, other) -> bool:
         return isinstance(other, Vector) and self._values == other._values
 
 

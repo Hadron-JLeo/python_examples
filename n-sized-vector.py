@@ -1,4 +1,4 @@
-""" This script defines a class Vector which can scale to any dimension """
+""" This script defines a class Vector which can be initialized to any dimension """
 
 from typing import Union
 import math

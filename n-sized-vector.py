@@ -1,3 +1,5 @@
+""" This script defines a class Vector which can scale to any dimension """
+
 from typing import Iterable, Union
 import math
 
